@@ -1,0 +1,12 @@
+{
+    "test": "Test",
+  "address": {
+    "street": "Straat",
+    "houseNumber": "Huisnummer",
+    "houseNumberAddition": "Toev.",
+    "postalCode": "Postcode",
+    "city": "Woonplaats",
+    "country": "land",
+    "clearAddress": "Wis adres"
+  }
+}
