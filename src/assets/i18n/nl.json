@@ -1,12 +1,863 @@
 {
-    "test": "Test",
-  "address": {
-    "street": "Straat",
-    "houseNumber": "Huisnummer",
-    "houseNumberAddition": "Toev.",
-    "postalCode": "Postcode",
-    "city": "Woonplaats",
-    "country": "land",
-    "clearAddress": "Wis adres"
-  }
+    "address": {
+        "city": "Plaats",
+        "clearAddress": "Wis adres",
+        "copyAddress": "Kopieër adres",
+        "country": "Land",
+        "houseNumber": "Huisnr.",
+        "houseNumberAddition": "Toev.",
+        "postalCode": "Postcode",
+        "street": "Straat"
+    },
+    "ambulanceService": "Ambulancedienst",
+    "attachments": {
+        "addPhoto": "Voeg foto toe",
+        "close": "Sluiten",
+        "deleteAttachment": "Dit verwijdert de bijlage uit deze rit. Weet je het zeker?",
+        "deleteCancel": "Annuleren",
+        "deleteConfirm": "Verwijderen",
+        "maxItemsAlert": "Per onderdeel kunnen maximaal vier foto's worden bijgevoegd.",
+        "photo": "Foto"
+    },
+    "buttons": {
+        "back": "Terug",
+        "cancel": "Annuleren",
+        "clear": "Wis",
+        "confirm": "Bevestigen",
+        "continue": "Doorgaan",
+        "create": "Aanmaken",
+        "done": "Klaar",
+        "no": "Nee",
+        "now": "Nu",
+        "ok": "Oké",
+        "yes": "Ja"
+    },
+    "crew": "Bemanning",
+    "crewMemberModel": {
+        "name": "Naam bemanningslid",
+        "select": "bemanningslid"
+    },
+    "driver": "Chauffeur",
+    "fields": {
+        "datepicker": {
+            "date": "Datum",
+            "time": "Tijd"
+        },
+        "selectable": {
+            "cancel": "Annuleren",
+            "clear": "Wissen",
+            "noResults": "Geen resultaten gevonden voor de ingevoerde zoekopdracht",
+            "search": "Zoeken"
+        },
+        "toggle": {
+            "no": "Nee",
+            "yes": "Ja"
+        }
+    },
+    "login": {
+        "anotherUserAlert": {
+            "cancel": "Kies ander voertuig",
+            "cancelMonitor": "Kies andere monitor",
+            "continue": "Aanmelden",
+            "header": "Voertuig bezet",
+            "headerMonitor": "Monitor bezet",
+            "monitorMessage1": "Gebruiker {{ avp }} is reeds aangemeld met monitor {{ monitor }}.",
+            "monitorMessage2": "Wil jij je toch aanmelden met deze monitor? Let op: {{ avp }} zal automatisch worden afgemeld.",
+            "vehicleMessage1": "Gebruiker {{ avp }} is reeds aangemeld op voertuig {{ vehicle }}.",
+            "vehicleMessage2": "Wil jij je toch aanmelden op dit voertuig? Let op: {{ avp }} zal automatisch worden afgemeld."
+        },
+        "authError": {
+            "close": "Sluit",
+            "message": "Er is een fout opgetreden tijdens het inloggen. Mogelijk heb je geen netwerkverbinding."
+        },
+        "automaticLogOffAlert": {
+            "header": "Automatisch afgemeld",
+            "message": "Gebruiker {{ avp }} heeft zich aangemeld op voertuig {{ vehicle }}. Je bent automatisch afgemeld. Indien jij je vergeten was af te melden verzoeken wij je om dit de volgende keer wel te doen."
+        },
+        "buttons": {
+            "continue": "Doorgaan zonder aanmelden",
+            "scheduled": "Besteld",
+            "signIn": "Aanmelden",
+            "urgent": "Spoed"
+        },
+        "changeUser": "Deze gebruiker uitloggen",
+        "copyright": "AmbuSuite © 2019",
+        "disclaimer": "Let op: dit systeem bevat bijzondere persoonsgegevens. Ga hier altijd op vertrouwelijke wijze mee om.",
+        "errorAlert": {
+            "header": "Aanmelden mislukt",
+            "message": "Tijdens het aanmelden is er een fout opgetreden."
+        },
+        "errorLogOff": {
+            "header": "Afmelden mislukt",
+            "message": "Tijdens het afmelden is er een fout opgetreden."
+        },
+        "loadIndicator": "Voertuiggegevens worden opgehaald",
+        "logOffAlert": {
+            "header": "Afmelden & Uitloggen",
+            "message": "Weet je zeker dat je wil afmelden en uitloggen?"
+        },
+        "logOffIndicator": "Bezig met afmelden",
+        "logOffVehicleAlert": {
+            "header": "Afmelden",
+            "message": "Weet je zeker dat je wil afmelden?"
+        },
+        "loggedOnAs": "Welkom, {{ name }}",
+        "login": "Inloggen",
+        "loginIndicator": "Aanmelden op voertuig {{ vehicle }}",
+        "monitor": "Hartmonitor",
+        "noLogin": "Je bent niet ingelogd.",
+        "shift": "Dienst",
+        "thirdCrewMemberFunction": "Functie derde bemanningslid",
+        "thirdCrewMemberName": "Naam derde bemanningslid",
+        "warningNoDrivers": {
+            "header": "Geen chauffeurs bekend",
+            "message": "Er zijn op het moment nog geen chauffeurs gekoppeld aan jouw ambulanceregio."
+        },
+        "warningNoPosts": {
+            "header": "Geen posten bij deze ambulanceregio bekend",
+            "message": "Er zijn op het moment nog geen posten gekoppeld aan jouw ambulanceregio."
+        },
+        "warningNoRegions": {
+            "header": "Geen ambulanceregio's bekend",
+            "message": "Er zijn op het moment nog geen ambulanceregio's gekoppeld aan jouw account."
+        },
+        "warningNoVehicles": {
+            "header": "Geen voertuigen bekend",
+            "message": "Er zijn op het moment nog geen voertuigen gekoppeld aan jouw ambulanceregio."
+        }
+    },
+    "menu": {
+        "logOff": "Uitloggen",
+        "signIn": "Aanmelden",
+        "signOut": "Afmelden"
+    },
+    "mka": {
+        "address": {
+            "button": "Adres MKA",
+            "title": "Adres vanuit de meldkamer"
+        },
+        "patient": {
+            "button": "Patiënt MKA",
+            "title": "Patiëntgegevens uit meldkamer"
+        },
+        "selectionText": "Wil je deze gegevens overnemen?",
+        "tripClosedNotification": "Dit zijn de gegevens zoals meegegeven uit de meldkamer."
+    },
+    "post": "Standplaats",
+    "synchronization": {
+        "mergeConflict": {
+            "header": "Externe conflicterende wijzigingen",
+            "localButton": "Lokale versie",
+            "message": "Er zijn wijzigingen op een andere apparaat doorgevoerd aan rit {{ tripNumber }}. De lokale versie is van {{ localDate }} om {{ localTime }} uur. De andere versie is van {{ remoteDate }} om {{ remoteTime}} uur. Welke versie wil je behouden?",
+            "remoteButton": "Andere versie"
+        },
+        "mergeConflictTripClosed": {
+            "header": "Externe conflicterende wijzigingen",
+            "message": "De rit {{ tripNumber }} is reeds afgesloten op een ander apparaat, de versie op dit apparaat wordt vervangen en afgesloten."
+        }
+    },
+    "trip": {
+        "assessment": {
+            "airway": {
+                "airwayAfterProcedures": "Airway na handelingen",
+                "airwayBeforeProcedures": "Airway voor handelingen",
+                "boussignacTube": "Bouss. tube",
+                "coniotomy": "Coniotomie",
+                "endotrachealTube": "Endo. tube",
+                "label": "Airway",
+                "mayoTube": "Mayo/guedel",
+                "mayoTubeColor": "Kleur",
+                "nasalMayoTube": "Nasale mayo",
+                "procedures": "Airway handelingen"
+            },
+            "amount": "Aantal",
+            "breathing": {
+                "absent": "Afwezig",
+                "amv": "AMV (l/min)",
+                "auscultationLungs": "Longen auscultatie",
+                "breathingAfterProcedures": "Breathing na handelingen",
+                "breathingBeforeProcedures": "Breathing voor handelingen",
+                "connected": "Aangesloten",
+                "cpapMask": "CPAP Masker",
+                "crackles": "Crepitaties",
+                "decreasedBreathSounds": "Ademgeruis verminderd",
+                "divergentBreathSounds": "Ademgeruis afwijkend",
+                "fiO2": "FiO2 (%)",
+                "freq": "Freq. (/min)",
+                "label": "Breathing",
+                "literPerMinute": "l/min",
+                "nasalCannula": "Neusbril",
+                "noAuscultation": "Geen auscultatie",
+                "nonRebreathingMask": "Non-rebr. mask",
+                "notConnected": "Niet aangesloten",
+                "peep": "PEEP (cm/H2O)",
+                "respiration": "Beademen",
+                "respirationDevice": "Beademingsautomaat",
+                "rhonchi": "Rhonchi",
+                "tensionPneumothoraxDecompression": "Ont. Span. Pneu."
+            },
+            "by": "Door",
+            "circulation": {
+                "capillaryRefillProlonged": "Capillaire refill > 2 seconden",
+                "cardioversion": "Cardioversie",
+                "circulationAfterProcedures": "Circulation na handelingen",
+                "circulationBeforeProcedures": "Circulation voor handelingen",
+                "defibrillation": "Defibrillatie",
+                "ecgExplanation": "Toelichting ECG",
+                "freqPerMinute": "Freq/min",
+                "ioNeedle": "IO Naald",
+                "label": "Circulation",
+                "ma": "mA",
+                "procedures": "Circulation handelingen",
+                "transcutanePacing": "Transcutaan pacen",
+                "typeOfRhythm": "Soort ritme"
+            },
+            "comments": "Toelichting",
+            "conducted": "Ja",
+            "disability": {
+                "arms": "A: Arms",
+                "divergent": "Afwijkend",
+                "doCalculateGcs": "GCS",
+                "duration": "uu:mm",
+                "eye": "Eye",
+                "face": "F: Face",
+                "fast": "FAST",
+                "gcs": "GCS",
+                "glucose": "Glucose",
+                "glucoseHigh": "High",
+                "glucoseLabel": "mmol/l",
+                "glucoseLow": "Low",
+                "isTimeUnknown": "Onbekend",
+                "label": "Disability",
+                "length": "Lengte (cm)",
+                "lossOfConsciousness": "Bewustzijnsverlies (min)",
+                "maximalEmv": "Maximale EMV",
+                "motor": "Motor",
+                "notDivergent": "Niet afwijkend",
+                "pts": "PTS",
+                "ptsAirway": "Luchtweg",
+                "ptsBoneLesion": "Botleasie",
+                "ptsConsciousness": "Bewustzijn",
+                "ptsOpenWound": "Open wond",
+                "ptsSysAlter": "Sys (alter)",
+                "pupil": "Pupil",
+                "pupilLeft": "Pupil links",
+                "pupilRight": "Pupil rechts",
+                "rts": "RTS",
+                "speech": "S: Speech",
+                "thrombolysisSuspected": "Mogelijk trombolyse/trombectomie",
+                "time": "T: Time",
+                "verbal": "Verbal",
+                "weight": "Gewicht (kg)"
+            },
+            "exposure": {
+                "hyperthermia": "Hyperthermie",
+                "hypothermia": "Hypothermie",
+                "isAgainstPainRelief": "Patiënt wil geen pijnstilling",
+                "isPainImmeasurable": "Pijn niet te meten",
+                "label": "Exposure",
+                "pain": "Pijnscore",
+                "remarks": "Omschrijving van overwegingen",
+                "temperature": "Temperatuur (C)"
+            },
+            "extra": "+ Extra assessment",
+            "head-to-toeSurvey": {
+                "abdomen": "Abdomen",
+                "amnioticFluid": "Vruchtwater",
+                "backArea": "Rug",
+                "bloodLoss": "Bloedverlies",
+                "extremitiesArm": "Extremiteiten arm",
+                "extremitiesLeg": "Extremiteiten been",
+                "fluidLoss": "Liquorverlies",
+                "gynaecology": "Verloskunde/Gynaecologie",
+                "headAppearance": "Hoofd & gelaat",
+                "incontinent": "Incontinent",
+                "label": "Top Teen Onderzoek",
+                "neckCervicalSpine": "Nek, hals en CWK",
+                "painOnCompression": "Pijn bij compressie",
+                "pelvis": "Bekken",
+                "pulsatingSwelling": "Pulserende zwelling",
+                "reboundTenderness": "Druk-/loslaatpijn",
+                "secretion": "Uitscheiding",
+                "subcutaneousEmphysema": "Subcutaan empfyseem",
+                "swellingEdema": "Zwelling/oedeem",
+                "thorax": "Thorax",
+                "vomiting": "Braken",
+                "wound": "Wond"
+            },
+            "label": "Assessment",
+            "location": "Plaats",
+            "medication": {
+                "administered": "Toegediend",
+                "administration": "Toediening",
+                "amount": "Hoeveelheid",
+                "extra": "+ Extra medicatie",
+                "extraInfusion": "+ Extra infuus",
+                "fluid": "Vloeistof",
+                "infusion": "Infuus",
+                "label": "Medicatie",
+                "mobileMedicalTeam": "MMT",
+                "name": "Medicatie",
+                "notAdministered": "Niet toegediend"
+            },
+            "notConducted": "Nee",
+            "notPerformed": "Niet uitgevoerd",
+            "number": "Nummer",
+            "otherResearch": "Overig onderzoek",
+            "performed": "Uitgevoerd",
+            "procedures": "Handelingen",
+            "remove": "Verwijder assessment",
+            "shortExtra": "+",
+            "size": "Nummer"
+        },
+        "background": {
+            "allergies": {
+                "allergies": "Omschrijving van allergieën van patiënt",
+                "label": "Allergies"
+            },
+            "events": {
+                "events": "Omschrijving van de huidige gebeurtenis",
+                "infectionRisk": "Infectierisico",
+                "label": "Events leading up to present illness/injury"
+            },
+            "label": "Background",
+            "medication": {
+                "label": "Medication",
+                "medication": "Omschrijving van medicatie van patiënt"
+            },
+            "past": {
+                "label": "Past Pertinent Medical History",
+                "past": "Omschrijving van medische historie van patiënt"
+            },
+            "symptoms": {
+                "label": "Symptoms/signs",
+                "symptoms": "Omschrijving van symptomen"
+            }
+        },
+        "close": {
+            "cancel": "Annuleren",
+            "closeTrip": "Rit Afsluiten",
+            "confirm": "Versturen",
+            "warning": "Weet je zeker dat je de rit wil afsluiten en versturen?"
+        },
+        "details": {
+            "contactPerson": {
+                "email": "E-mailadres",
+                "label": "Contactpersoon",
+                "name": "Naam",
+                "relation": "Relatie",
+                "telephone": "Telefoonnummer"
+            },
+            "identification": {
+                "countryOfOrigin": "Land van herkomst",
+                "label": "ID vastleggen",
+                "wid": "WID",
+                "widNumber": "WID nummer"
+            },
+            "invoiceInformation": {
+                "copyAddress": "Overnemen werkgeversadres",
+                "differentAddress": "Afwijkend factuuradres",
+                "firstName": "Voornaam",
+                "label": "Facturatie entiteit & adres",
+                "lastName": "Achternaam",
+                "prefix": "Tuss."
+            },
+            "label": "Details",
+            "otherPatientData": {
+                "email": "E-mailadres",
+                "hospitalRegistrationNumber": "Inschrijfnummer ziekenhuis",
+                "label": "Overige patiëntgegevens",
+                "telephone": "Telefoonnummer"
+            },
+            "patientData": {
+                "age": "Leeftijd",
+                "copyDropoffAddress": "Kopieër brengadres",
+                "copyPickupAddress": "Kopieër haaladres",
+                "cov": {
+                    "covCheck": "Controle op verzekering",
+                    "insurance": "Verzekeringsgegevens:",
+                    "invalid": "Ongeldig zoekpad",
+                    "match": "Er is een match!",
+                    "moreData": "Voor de Controle op Verzekeringsgegevens zijn meer/andere gegevens benodigd:",
+                    "noInsurance": "Deze persoon is niet langer verzekerd, alleen naw gegevens zijn beschikbaar. Wil je deze gegevens overnemen?",
+                    "noMatch": "Er is geen match!",
+                    "noMatchExplanation": "Met de huidige gegevens is geen persoon gevonden. Het kan zijn dat de persoon niet bekend is, of dat er meer gegevens nodig zijn om de persoon te vinden.",
+                    "option1": "optie 1: Geboortedatum, BSN",
+                    "option2": "optie 2: Geboortedatum, polisnummer",
+                    "option3": "optie 3: Geboortedatum, postcode, huisnummer",
+                    "option4": "optie 4: Geboortedatum, geslacht, geboortenaam"
+                },
+                "dateOfBirth": "Geboortedatum",
+                "employeeIdentificationNumber": "",
+                "firstName": "Initialen",
+                "initials": "",
+                "insuranceCompany": "Zorgverzekeraar",
+                "insurancePolicyNumber": "Polisnummer",
+                "label": "Patiëntgegevens",
+                "lastName": "Achternaam",
+                "nationalIdentificationNumber": "BSN",
+                "nationalIdentificationNumberSource": "BSN bron",
+                "newBorn": "Pasgeboren",
+                "phoneNumber": "Telefoonnummer",
+                "prefix": "Tussenv."
+            },
+            "paymentInformation": {
+                "creditCardNumber": "Creditcardnummer",
+                "cvc": "CVC",
+                "label": "Betaalgegevens",
+                "payedOnAmbulance": "Betaald in ambulance"
+            },
+            "triage": {
+                "classification": {
+                    "label": "Triage classificatie",
+                    "t1": "T1",
+                    "t2": "T2",
+                    "t3": "T3"
+                },
+                "injuryCardNumber": "Nummer gewondenkaart",
+                "label": "Triage"
+            }
+        },
+        "evaluation": {
+            "aggression": {
+                "label": "Agressie & geweld",
+                "locationOfAggression": "Locatie",
+                "locationOfAggressionOther": "Toelichting",
+                "reasonForAggression": "Aanleiding",
+                "reasonForAggressionOther": "Toelichting",
+                "typeOfAggression": "Soort",
+                "whoCausedTheAggression": "Agressor",
+                "whoCausedTheAggressionOther": "Toelichting"
+            },
+            "feedbackTriage": {
+                "label": "Feedback triage",
+                "triageExplanation": "Toelichting feedback triage",
+                "triageMentalHealthStateCorrect": "Toestandsbeeld conform triage?",
+                "triageUnitCorrect": "Was volgens jou de ingezette eenheid correct?",
+                "triageUrgencyCorrected": "Correctie MKA urgentie"
+            },
+            "label": "Evaluatie",
+            "nurseEvaluation": {
+                "botTalk": "BOT-gesprek",
+                "deviationFromProtocolNumbers": "Afgeweken van protocolnummer(s)",
+                "deviationReason": "Reden van afwijking",
+                "informationLeafletGiven": "Informatiefolder uitgereikt",
+                "label": "Evaluatie verpleegkundige",
+                "reviewRequestedWithConsultantName": "Nabespreking gewenst met"
+            }
+        },
+        "info": {
+            "addPatient": "Extra patiënt toevoegen",
+            "closeTrip": "Rit afsluiten",
+            "patients": "Patiënten",
+            "requiredDescription": "Je bent verplicht deze velden in te vullen voordat je de rit kunt versturen.",
+            "requiredFields": "Verplichte velden",
+            "tripData": "Ritgegevens"
+        },
+        "location": {
+            "deliveryLocation": {
+                "foreign": "Buitenlands ziekenhuis of campus",
+                "hospital": "Bestemming",
+                "label": "Brengadres",
+                "mobileUrgencyGroup": "Begeleiding door MUG",
+                "patientNotTransported": "Patiënt niet vervoerd",
+                "patientTransported": "Patiënt vervoerd",
+                "roundTripLeg": "Richting",
+                "sendToUrgentCareCenter": "HAP",
+                "subTripType": "Subsoort vervoer",
+                "transported": "Vervoerd door ambulance",
+                "tripType": "Soort vervoer",
+                "urgentCareCenter": "Huisartsenpost",
+                "whyDestination": "Waarom naar die bestemming?",
+                "whyNotTransported": "Waarom niet vervoerd?"
+            },
+            "description": "Omschrijving",
+            "label": "Locatie",
+            "pickupHospital": "Haalziekenhuis",
+            "pickupLocation": {
+                "highway": "Autosnelweg",
+                "highwayHmp": "HMP",
+                "highwayNumber": "Nummer",
+                "intervention": {
+                    "interhospitalTransport": "Interhospitaal transport",
+                    "primaryIntervention": "Primaire interventie"
+                },
+                "interventionLocation": "Interventieplaats",
+                "interventionType": "Type interventie",
+                "label": "Haaladres",
+                "specificLocation": "Specifieke verblijfplaats"
+            }
+        },
+        "note": {
+            "considerations": {
+                "label": "Overwegingen"
+            },
+            "label": "Notities",
+            "note": "Notitie",
+            "readPermission": {
+                "all": "Iedereen",
+                "finance": "Financieel",
+                "label": "Wie mag dit bericht lezen?",
+                "medical": "TM/MSB",
+                "personal": "Persoonlijk"
+            },
+            "title": "Titel"
+        },
+        "objective": {
+            "km": {
+                "departureLocation": "Vertrokken vanaf",
+                "kmArrival": "Aankomst",
+                "kmDeparture": "Vertrek",
+                "kmTotal": "Aantal",
+                "label": "KM-stand",
+                "newTripBeforeArrivalPost": "Nieuwe oproep voor aankomst standplaats",
+                "timeAvailable": "Tijdstip beschikbaar",
+                "tollTunnel": "Toltunnel"
+            },
+            "label": "Opdracht",
+            "medicalNotes": {
+                "label": "Medisch kladblok"
+            },
+            "physicianAndResources": {
+                "additionalResources": "Bijkomende middelen",
+                "ambulance": "Ambulance",
+                "applicant": "Verwijzende arts",
+                "applicantPresent": "Aanwezig bij aankomst",
+                "fireBrigade": "Brandweer",
+                "generalPractitioner": "Huisarts",
+                "label": "Arts & Middelen",
+                "mobileUrgencyGroup": "MUG",
+                "paramedicalInterventionTeam": "PIT",
+                "police": "Politie"
+            },
+            "tripDetailsMka": {
+                "ach": "ACH",
+                "dispatchZipCode": "Postcode vertrek",
+                "incidentId": "Incidentnummer",
+                "label": "Ritdetails meldkamer",
+                "numberOfPatients": "Aantal patiënten",
+                "referrer": "Verwijzer",
+                "urgency": "Urgentie MKA"
+            }
+        },
+        "patient": {
+            "gender": {
+                "female": "Vrouw",
+                "label": "Geslacht",
+                "male": "Man",
+                "unknown": "Onbekend"
+            },
+            "label": "Patiënt",
+            "name": "Naam",
+            "patientData": "Patiëntgegevens",
+            "remove": "Verwijder patiënt",
+            "removeConfirm": "Weet je zeker dat je deze patiënt wilt verwijderen?",
+            "years": "jaar"
+        },
+        "recommendation": {
+            "considerations": "Overwegingen",
+            "considerationsDescription": "Omschrijving van overwegingen",
+            "label": "Recommendation",
+            "preliminaryDiagnosis": {
+                "deceased": "Patiënt overleden?",
+                "differential": "Differentiaal/nevendiagnose",
+                "extra": "+ Extra werkdiagnose",
+                "injuryCodes": "Letselcodes",
+                "intoxication": "Intoxicatie",
+                "label": "Werkdiagnose",
+                "notes": "Toelichting werkdiagnose",
+                "specialism": "Specialisme"
+            },
+            "treatment": "Toelichting behandeling/vervolgzorg",
+            "treatmentDescription": "Toelichting"
+        },
+        "research": {
+            "label": "Onderzoeksvragen",
+            "patientIncludedInResearch": "Patiënt geïncludeerd in onderzoek"
+        },
+        "safeAtHome": {
+            "acutelyUnsafeWarning": "Schakel politie in",
+            "areInvolvedPartiesInformed": "Zijn de patiënt en/of andere betrokkenen ingelicht over de zorgmelding (bij Veilig Thuis of huisarts)?",
+            "areInvolvedPartiesInformedExplanation": "Als professionele hulpverlener dien je de betrokkene(n) te informeren over deze melding. Alleen als je eigen veiligheid of die van de betrokkene(n) hierdoor in gevaar kan komen mag dit achterwege gelaten worden. Wel duidelijk de reden van niet-informeren opschrijven! Ook indien deze mededeling niet mogelijk was, graag goed omschrijven.",
+            "causeForConcern": "Aard van de zorgen",
+            "causeForConcernOther": "Overige aard van de zorgen",
+            "concernsReportedBy": "Door",
+            "consultationResult": "Wat is de uitkomst van het overleg?",
+            "consultedGeneralPractitioner": "Huisarts",
+            "consultedUrgentCareCenter": "Huisartsenpost",
+            "consultedWith": "Overleg met",
+            "consultedWithOther": "Overig...",
+            "contactDataCaretaker": {
+                "label": "Indien van toepassing van diegenen die kind(eren) of mantelzorgvrager(s) opvangt en verblijfadres",
+                "name": "Naam",
+                "phoneNumber": "Telefoonnummer",
+                "relation": "Relatie"
+            },
+            "contactDataForSafeAtHome": {
+                "label": "Telefoonnummer door Veilig Thuis te gebruiken",
+                "name": "Naam",
+                "phoneNumber": "Telefoonnummer",
+                "relation": "Relatie"
+            },
+            "involvedPartiesInformedReaction": "Beschrijf de reactie",
+            "involvementOfAddiction": "Is er sprake van verslaving? (Bij wie en waaruit blijkt dit?)",
+            "involvementOfPsychiatry": "Is er sprake van psychiatrie? (Bij wie en waaruit blijkt dit?)",
+            "isSafeAtHomeApplicable": "Veilig Thuis van toepassing",
+            "label": "Veilig Thuis",
+            "ownGeneralPractitionerAgreements": "Welke afspraken zijn er gemaakt met de huisarts?",
+            "patient": {
+                "age": "Leeftijd",
+                "dateOfBirth": "Geboortedatum",
+                "duplicate": "Kopiëer patiënt",
+                "generalPractitioner": "Huisarts",
+                "initials": "Initialen",
+                "label": "Gegevens patiënt",
+                "lastName": "Achternaam",
+                "nationalIdentificationNumber": "BSN",
+                "phoneNumber": "Telefoonnummer",
+                "prefix": "Tussenv."
+            },
+            "policeAgreements": "Welke afspraken zijn gemaakt met de politie?",
+            "reasonForInvolvement": "Wat is de aanleiding geweest voor betrokkenheid ambulancepersoneel?",
+            "reasonForReport": "Wat is de reden om een zorgmelding te doen?",
+            "reportBasedOn": "Reden van melden gebaseerd op",
+            "situationAtLocation": "Wat was de situatie ter plaatse?",
+            "sputovamo": {
+                "actionsTaken": "Welke actie heb jij ondernomen?",
+                "childAccompaniedBy": "Wie vergezelt het kind?",
+                "didCauserComeToFirstAid": "Is de veroorzaker meegekomen naar SEH?",
+                "didWitnessesComeToFirstAid": "Zijn er getuigen meegekomen?",
+                "doesInjuryMatchAge": "Klopt het letsel met opgegeven ouderdom?",
+                "doesStatementMatchReality": "Klopt verklaring met soort, plaats, uiterlijk?",
+                "injuryAge": "Wanneer is het gebeurd?",
+                "injuryAppearance": "Wat zijn de uiterlijke kenmerken?",
+                "injuryCause": "Wat was de oorzaak?",
+                "injuryLocation": "Welke plaats?",
+                "injuryTypes": "Welk soort letsel?",
+                "isAppearanceCommon": "Ziet het letsel er gebruikelijk uit?",
+                "isLocationCommon": "Is dit een gebruikelijke plaats?",
+                "isNeglectSuspected": "Heb jij het vermoeden dat er sprake is van verwaarlozing?",
+                "label": "SPUTOVAMO",
+                "measuresTaken": "Welke maatregelen werden genomen?",
+                "oldInjuries": "Welke letsels?",
+                "wereMeasuresAdequate": "Was de ondernomen actie adequaat?",
+                "wereOldInjuriesVisible": "Waren er oude letsels te zien?",
+                "wereOthersPresent": "Waren er anderen bij aanwezig?",
+                "whoIsCauser": "Wie was de veroorzaker?",
+                "whoWasPresent": "Wie?"
+            },
+            "statementsOfInvolvedParties": "Wat verklaarde de patiënt en andere directbetrokkenen over het incident (voor zover bekend)?",
+            "stepFive": "Stap 5. Melden van de zorgen",
+            "stepFour": "Stap 4. Wegen van ernst",
+            "stepFourExplanation": "Naar aanleiding van het wegen van de signalen uit stap 1, het overleg in stap 2 en het gesprek met betrokkenen in stap 3 is dit formulier ingevuld.",
+            "stepOne": "Stap 1. In kaart brengen van de signalen",
+            "stepOneExplanation": "Beschrijf concreet en zo objectief mogelijk waarneembaar gedrag en feitelijke gebeurtenissen (vermijd interpretaties)",
+            "stepThree": "Stap 3. Gesprek met betrokken zorgvragers, zoals patiënt, kind(eren), mantelzorgvrager(s) of anderen",
+            "stepTwo": "Stap 2. Overleg met collega's en/of Veilig Thuis",
+            "stepsTakenToEnsureSafety": "Welke stappen heb je / hebben jullie zelf gezet om veiligheid te creëren voor betrokkene(n), achterblijver(s), kind(eren), en/of mantelzorgvrager(s)?",
+            "wasOwnGeneralPractitionerConsulted": "Is er overleg met eigen huisarts geweest?",
+            "wasPolicePresent": "Is politie aanwezig geweest?"
+        },
+        "situation": {
+            "airway": {
+                "free": "Vrij",
+                "label": "Airway",
+                "threatened": "Bedreigd"
+            },
+            "breathing": {
+                "absentBreathSound": "Afwezig ademgeruis",
+                "breathingAbsent": "Ademhaling afwezig",
+                "crackles": "Crepitaties",
+                "decreasedBreathSounds": "Verminderd ademgeruis",
+                "label": "Breathing",
+                "otherResearch": "Overig onderzoek",
+                "rhonchi": "Rhonchi"
+            },
+            "circulation": {
+                "absent": "Afwezig",
+                "externalBloodLoss": "Uitwendig bloedverlies",
+                "label": "Circulation",
+                "pale": "Bleek"
+            },
+            "disability": {
+                "alert": "A",
+                "label": "Disability",
+                "pain": "P",
+                "unresponsive": "U",
+                "verbal": "V"
+            },
+            "general": {
+                "inspection": "Beschrijving van schouw van de situatie",
+                "inspectionSameAsReason": "Komt de schouw overeen met de reden van de melding?",
+                "label": "Algemeen",
+                "reportReason": "Reden van melding"
+            },
+            "incident": {
+                "applicant": "Aanvrager",
+                "areHazardousSubstancesInvolved": "Gevaarlijke stof(fen)",
+                "assistance": "Assistentie",
+                "contra": "Contra",
+                "debriefingLeft": "Overdracht achtergelaten",
+                "debriefingSent": "Overdracht doorgestuurd",
+                "driver": "Bestuurder",
+                "fallingHeight": "Val (m)",
+                "hazardousSubstances": "Naam gevaarlijke stof(fen)",
+                "impactSpeed": "Impact (km/u)",
+                "incidentType": "Soort incident",
+                "label": "Incident",
+                "leftAlready": "Reeds vertrokken",
+                "mechanism": "Mechanisme",
+                "mentalHealthCare": "GGZ",
+                "noDebriefing": "Geen overdracht",
+                "nonTrauma": "Non-trauma",
+                "notOnLocation": "Niet ter plaatse",
+                "obstetrician": "Verloskundige",
+                "onLocation": "Ter plaatse",
+                "passenger": "Passagier",
+                "protection": "Bescherming patiënt",
+                "trauma": "Trauma",
+                "vehicle": "Vervoersmiddel"
+            },
+            "insufficient": "Insufficiënt",
+            "label": "Situation",
+            "sufficient": "Sufficiënt"
+        },
+        "siwha": {
+            "call": {
+                "label": "Oproep",
+                "madeBy": "Oproep door",
+                "refHC112": "REF. HC 112",
+                "timeOfCall": "Datum/tijd oproep"
+            },
+            "employer": {
+                "cbk": "CBK",
+                "label": "Werkgever",
+                "name": "Naam werkgever",
+                "nameOther": "Overig",
+                "quay": "Kaai",
+                "type": "Soort werkgever",
+                "typeOther": "Andere"
+            },
+            "incident": {
+                "advice": "Advies",
+                "cause": "Oorzaak van het ongeval",
+                "copyPickupAddress": "Kopieer haaladres",
+                "dateTimeIncident": "Datum/tijd ongeval",
+                "incidentType": "Soort ongeval",
+                "label": "Gegevens ongeval",
+                "locationOtherThanEmployer": "Plaats ongeval anders dan werkgever",
+                "natureInjury": "Aard der verwondingen",
+                "patientType": "Type patiënt",
+                "patientTypeOther": "Andere",
+                "resultIntervention": "Resultaat interventie",
+                "sector": "Sector",
+                "shift": "Shift",
+                "specify": "Specificeer"
+            },
+            "label": "SIWHA",
+            "protection": {
+                "gloves": "Specificatie handschoenen",
+                "label": "PBM + beschadigingen",
+                "materials": "Betrokken materialen",
+                "protection": "PBM",
+                "protectionDamaged": "Beschadigingen"
+            }
+        },
+        "times": {
+            "arrivalHospital": "Aankomst ziekenhuis",
+            "arrivalPatient": "Aankomst patiënt",
+            "departurePatient": "Vertrek patiënt",
+            "dispatch": "Uitruk",
+            "end": "Einde rit",
+            "exceeding": "Overschrijding",
+            "exceedingDispatchOffice": "Overschrijding meldkamer uitgifte",
+            "label": "Statustijden",
+            "order": "Opdracht",
+            "reason": "Reden",
+            "reasonExceedingArrivalPatient": "Reden overschrijding aankomst patiënt",
+            "reasonExceedingDispatch": "Reden overschrijding uitruk",
+            "release": "Vrijmelding",
+            "report": "Meldtijd",
+            "unknown": "N.N.B."
+        },
+        "validation": {
+            "forceClose": "Sluit af als privé-rit",
+            "message": "De rit kan niet worden afgesloten. Onderstaande velden zijn niet ingevuld of incorrect.",
+            "title": "Ritvalidatie"
+        },
+        "vitals": {
+            "label": "Vitals",
+            "monitorData": {
+                "bloodPressure": "Bloeddruk",
+                "etCO2": "EtCO2",
+                "heartFreq": "HF",
+                "heartFrequency": "Hartfrequentie",
+                "labelWithMonitor": "Monitorgegevens",
+                "labelWithoutMonitor": "Meetgegevens",
+                "measurement": "Meetpunt",
+                "resp": "Resp.",
+                "spO2": "SpO2",
+                "time": "Tijd"
+            },
+            "sync": "Synchroniseren"
+        },
+        "generalPractitioner": {
+            "selected": "Geselecteerde huisarts",
+            "label": "Huisarts",
+            "title": "Huisarts zoeken",
+            "city": "Plaats",
+            "name": "Naam huisarts",
+            "search": "Zoek",
+            "results": "Resultaten",
+            "practiceName": "Praktijknaam",
+            "address": "Adres",
+            "zorgMail": "ZorgMail",
+            "noResults": "Er zijn geen resultaten gevonden.",
+            "stopSearching": "Stop met zoeken",
+            "custom": "Voer handmatig in",
+            "customExplanation": "(Kies voor deze optie wanneer de huisarts niet in het systeem staat, geen ZorgMail)",
+            "add": "Voeg toe",
+            "save": "Keuze opslaan",
+            "delete": "Verwijder keuze",
+            "noGeneralPractitioner": "Er is geen huisarts geselecteerd."
+        }
+    },
+    "tripNumber": "Ritnummer",
+    "tripOverview": {
+        "acceptTrip": "Accepteer",
+        "chooseTripNumber": "Kies een nieuw ritnummer",
+        "closedTrips": "Afgesloten ritten",
+        "confirmTripNumber": "Bevestig aanmaken deze rit",
+        "createNewTrip": "Voeg nieuwe rit toe",
+        "createTripIndicator": "Rit {{ tripNumber }} wordt aangemaakt.",
+        "dateOfBirth": "Geb. datum",
+        "editTrip": "Bewerken",
+        "errorAlert": {
+            "header": "Aanmaken rit mislukt",
+            "message": "Tijdens het aanmaken van de rit is er een fout opgetreden."
+        },
+        "fromAddress": "Van",
+        "newTrip": "Nieuwe rit",
+        "newTrips": "Nieuwe ritten",
+        "noClosedTrips": "Er zijn nog geen ritten afgerond",
+        "noNewTrips": "Er zijn momenteel geen nieuwe ritten",
+        "noOpenTrips": "Er zijn momenteel geen openstaande ritten",
+        "openTrip": "Inzien",
+        "openTrips": "Openstaande ritten",
+        "person": "Persoon",
+        "title": "Ritoverzicht",
+        "toAddress": "Naar",
+        "tripNumber": "Ritnummer",
+        "urgency": "Urgentie"
+    },
+    "vehicle": "Voertuig",
+    "paginator": {
+        "itemsPerPage": "Aantal items per pagina",
+        "nextPage": "Volgende pagina",
+        "previousPage": "Vorige pagina",
+        "firstPage": "Eerste pagina",
+        "lastPage": "Laatste pagina",
+        "rangeNoItems": "0 van 0",
+        "range": "{{ startIndex }} - {{ endIndex }} van {{ length }}"
+    }
 }

@@ -11,6 +11,20 @@ const routes: Routes = [
         path: 'address',
         loadChildren: () =>
             import('./pages/address/address.module').then(m => m.AddressModule)
+    },
+    {
+        path: 'situation',
+        loadChildren: () =>
+            import('./pages/situation/situation.module').then(
+                m => m.SituationModule
+            )
+    },
+    {
+        path: 'background',
+        loadChildren: () =>
+            import('./pages/background/background.module').then(
+                m => m.BackgroundModule
+            )
     }
 ];
 

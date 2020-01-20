@@ -1,2 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@ambusuite/core/dist/ambusuite/ambusuite.css';
+
+.toggle-label,
+.checkbox-radio-label {
+  vertical-align: top;
+  font-size: 16px;
+  color: var(--ion-text-color);
+  font-weight: 500;
+
+  &[slot='end'] {
+    margin-left: 10px;
+  }
+
+  &[slot='start'] {
+    margin-right: 10px;
+  }
+
+  ion-icon {
+    width: 12px;
+    height: 12px;
+    margin: 0 3px;
+  }
+}

@@ -1,0 +1,48 @@
+<h1>Situation!</h1>
+<h2>General</h2>
+<ambu-parts-situation-general
+    [general]="general"
+    [isDisabled]="isDisabled"
+    [medicalNote]="reason"
+></ambu-parts-situation-general>
+<h2>Incident</h2>
+<ambu-parts-situation-incident
+    [incident]="incident"
+    [incidentTypeOptions]="[]"
+    [isDisabled]="isDisabled"
+    [mechanismOptions]="mechanismOptions"
+    (incidentChange)="onChangeIncident($event)"
+>
+</ambu-parts-situation-incident>
+<h2>Ter plaatse</h2>
+<ambu-parts-situation-on-location
+    [incident]="incident"
+    [isDisabled]="isDisabled"
+></ambu-parts-situation-on-location>
+<h2>Airway</h2>
+<ambu-parts-situation-airway
+    [airway]="airway"
+    [isDisabled]="isDisabled"
+></ambu-parts-situation-airway>
+<h2>Breathing</h2>
+<ambu-parts-situation-breathing
+    [breathing]="breathing"
+    [leftRightOptions]="leftRightOptions"
+    [isDisabled]="isDisabled"
+></ambu-parts-situation-breathing>
+<h2>Circulation</h2>
+<ambu-parts-situation-circulation
+    [circulation]="circulation"
+    [isDisabled]="isDisabled"
+></ambu-parts-situation-circulation>
+<h2>Disability</h2>
+<ambu-parts-situation-disability
+    [disability]="disability"
+    [isDisabled]="isDisabled"
+>
+</ambu-parts-situation-disability>
+<input
+    type="number"
+    [(ngModel)]="temp"
+    (ngModelChange)="onChangeIncident($event)"
+/>
